@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Задание 1 по WEB</title>
+</head>
+
+<body>
+	<h1>Практическое задание по web №1, выполнил Мавренко Никита 21/1 </h1>
+	<hr>
+	<h2>Ссылки</h2>
+	<ul>
+		<li><a href="http://www.kubsu.ru/">Ссылка на сайт kubsu</a></li>
+		<li><a href="https://www.kubsu.ru/">Ссылка на сайт kubsu в протоколе https</a></li>
+		<li><a href="">
+				<div>Изображение ссылка</div>
+				<img src="https://www.kubsu.ru/sites/default/files/news/kubgu_28.jpg" alt="" width="500">
+			</a>
+		</li>
+		<li><a href="inner.html">Ссылка на внутреннюю страницу</a></li>
+		<li><a href="index.html">Ссылка на главную страницу</a></li>
+		<li><a href="#form">Ссылка на фрагмент текущей страницы</a></li>
+		<li><a href="http://www.kubsu.ru/?login=nikitamavrenko&password=12345&email=nikitamavrenko@yandex.ru">Ссылка с тремя параметрами url</a></li>
+		<li><a href="https://moodle.kubsu.ru/course/view.php?id=780">Ссылка с параметром id</a></li>
+		<li><a href="inner.html">Относительная ссылка на страницу в текущем каталоге</a></li>
+		<li><a href="./about/page.html">Ссылка в каталоге about</a></li>
+		<li><a href="../page.html">Ссылка в каталоге выше текущего</a></li>
+		<li><a href="../../page.html">Ссылка в каталоге двумя уровнями выше</a></li>
+		<li>Контекстная ссылка в тексте абзаца:
+			<p>URL (англ. Uniform Resource Locator) — это строка, определяющая расположение ресурса (например, веб-страницы, изображения или видео) в Интернете.
+
+				В контексте протокола <a href="https://developer.mozilla.org/ru/docs/Glossary/HTTP">HTTP</a>, URL называют «веб-адресом» или «ссылкой». <a href="https://developer.mozilla.org/ru/docs/Glossary/Browser">Браузер</a> отображает URL в адресной строке, например: https://developer.mozilla.org. Некоторые браузеры отображают только часть URL, которая находится после «//», то есть доменное имя.</p>
+		</li>
+		<li><a href="https://www.w3schools.com/html/html_images_imagemap.asp">Ссылка на фрагмент страницы стороннего сайта</a></li>
+		<li>Ссылки из прямоугольных и круглых областей картинки
+
+			<br>
+			<img src="https://www.kubsu.ru/sites/default/files/news/kubgu_28.jpg" alt="" width="500" usemap="#mymap">
+			<map name="mymap">
+				<area shape="rect" coords="0,0,200,100" href="https://kubsu.ru/" alt="Прямоугольная область">
+				<area shape="circle" coords="300,300,300" href="https://kubsu.ru/" alt="Круглая область">
+			</map>
+		</li>
+		<li><a href="">Ссылка с пустым href</a></li>
+		<li><a>Ссылка без href</a></li>
+		<li><a href="https://www.kubsu.ru/" rel="nofollow">Ссылка, по которой запрещено переходить поисковикам</a></li>
+		<li><a href="https://www.kubsu.ru/" rel="noindex">Ссылка, по которой запрещено индексировать поисковикам</a></li>
+		<li>
+			<p>Нумерованный список ссылок</p>
+			<ol>
+				<li><a href="https://learn.javascript.ru/" title="Learn javascript">Learn javascript</a></li>
+				<li><a href="https://developer.mozilla.org/en-US/" title="MDN">MDN</a></li>
+				<li><a href="https://www.w3schools.com/" title="W3 school">W3 school</a></li>
+				<li><a href="https://react.dev/" title="React">React</a></li>
+			</ol>
+		</li>
+		<li><a href="ftp://nikita:pass123@example.com/Temp/file.txt">Ссылка на FTP</a></li>
+	</ul>
+	<br>
+	<h2>Форма</h2>
+	<form action="/" method="POST" id="form">
+		<label for="fio">ФИО</label>
+		<input type="text" name="fio" id="fio">
+		<br>
+		<label for="tel">Телефон</label>
+		<input type="tel" name="tel" id="tel">
+		<br>
+		<label for="email">Email</label>
+		<input type="email" name="email" id="email">
+		<br>
+		<label for="birth">Дата рождения</label>
+		<input type="date" name="birth" id="birth">
+		<br>
+		Пол
+		<label>
+			<input type="radio" name="sex" value="Мужчина" />
+			Мужчина</label>
+		<label>
+			<input type="radio" name="sex" value="Женщина" />
+			Женщина</label>
+		<br />
+		<label for="lang">Любимый язык программирования</label>
+		<br>
+		<select name="PL list" multiple="multiple">
+			<option value="1" selected="selected">Pascal</option>
+			<option value="2">C</option>
+			<option value="3">C++</option>
+			<option value="4">JavaScript</option>
+			<option value="5">PHP</option>
+			<option value="6">Python</option>
+			<option value="7">Java</option>
+			<option value="8">Haskel</option>
+			<option value="9">Clojure</option>
+			<option value="10">Prolog</option>
+			<option value="11">Scala</option>
+		</select>
+		<br>
+		<label for="bio">Биография</label>
+		<br>
+		<textarea name="bio" id="bio" rows="10" cols="50"></textarea>
+		<br>
+		<label for="contract">С контрактом ознакомлен(а)</label>
+		<input type="checkbox" name="contract" id="contract" />
+		<br>
+		<input type="submit" value="Сохранить">
+	</form>
+</body>
+
+</html>
